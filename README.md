@@ -1,8 +1,10 @@
-# Calculator App
+# Frontend Mentor - Calculator app solution
+
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
-- [Calculator App](#calculator-app)
+- [Frontend Mentor - Calculator app solution](#frontend-mentor---calculator-app-solution)
   - [Table of contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Screenshot](#screenshot)
@@ -29,8 +31,8 @@ At this point everything is ready for you to start working.
 
 ### Links
 
-- Solution URL: [solution URL here](https://github.com/nmorajda/calculator-app)
-- Live Site URL: [live site URL here](https://nmorajda.github.io/calculator-app/)
+- [Solution URL](https://github.com/nmorajda/calculator-app)
+- [Live Site URL](https://nmorajda.github.io/calculator-app/www)
 
 ## My process
 
