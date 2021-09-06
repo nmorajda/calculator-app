@@ -1,0 +1,272 @@
+@import url("https://fonts.google.com/specimen/Spartan:wght@400,700&display=swap");
+:root {
+  --main-bg: hsl(224, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --key-bg: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --accent-key-bg: hsl(6, 63%, 50%);
+  --accent-toggle: hsl(6, 63%, 50%);
+  --accent-key-shadow: hsl(6, 70%, 34%);
+  --primary-key-bg: hsl(30, 25%, 89%);
+  --primary-key-shadow: hsl(28, 16%, 65%);
+  --primary-text-color: hsl(221, 14%, 31%);
+  --secondary-text-color: hsl(0, 0%, 100%);
+  --accent-text-color: hsl(0, 0%, 100%);
+  --header-text-color: hsl(0, 0%, 100%);
+  --screen-text-color: var(--secondary-text-color);
+}
+
+.theme-2 {
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-bg: hsl(0, 5%, 81%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --key-bg: hsl(185, 42%, 37%);
+  --key-shadow:hsl(185, 58%, 25%);
+  --accent-key-bg: hsl(25, 98%, 40%) ;
+  --accent-toggle: hsl(25, 99%, 27%);
+  --accent-key-shadow: hsl(6, 70%, 34%);
+  --primary-key-bg: hsl(45, 7%, 89%);
+  --primary-key-shadow: hsl(35, 11%, 61%);
+  --primary-text-color: hsl(60, 10%, 19%);
+  --secondary-text-color: hsl(0, 0%, 100%);
+  --accent-text-color: hsl(0, 0%, 100%);
+  --header-text-color: var(--primary-text-color);
+  --screen-text-color: var(--primary-text-color);
+}
+
+.theme-3 {
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-bg: hsl(268, 71%, 12%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --key-bg: hsl(281, 89%, 26%);
+  --key-shadow:hsl(285, 91%, 52%);
+  --accent-key-bg: hsl(176, 100%, 44%);
+  --accent-toggle: hsl(176, 100%, 44%);
+  --accent-key-shadow: hsl(177, 92%, 70%);
+  --primary-key-bg: hsl(268, 47%, 21%);
+  --primary-key-shadow: hsl(290, 70%, 36%);
+  --primary-text-color: hsl(52, 100%, 62%);
+  --secondary-text-color: hsl(0, 0%, 100%);
+  --accent-text-color: hsl(0, 0%, 0%);
+  --header-text-color: var(--primary-text-color);
+  --screen-text-color: var(--primary-text-color);
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: "Spartan", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--main-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.attribution {
+  margin: 3.2rem 0;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: var(--header-text-color);
+}
+@media (min-height: 780px) {
+  .attribution {
+    position: absolute;
+    bottom: 3.2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0;
+  }
+}
+.attribution a {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: var(--accent-key-bg);
+}
+.attribution a:hover {
+  opacity: 0.9;
+}
+
+.calc__header {
+  width: 100%;
+  margin-bottom: 3.2rem;
+  color: var(--header-text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.calc__title {
+  font-size: 3.6rem;
+  color: currentColor;
+}
+.calc__theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.calc__theme h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: currentColor;
+}
+.calc__theme .labels,
+.calc__theme .inputs {
+  padding: 0.8rem 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.calc__theme .labels label {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.calc__theme .inputs {
+  border-radius: 100vh;
+  background-color: var(--toggle-bg);
+}
+.calc__theme .inputs input {
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-key-bg);
+  border-radius: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.calc__theme .inputs input:checked {
+  visibility: visible;
+  opacity: 1;
+}
+.calc__screen {
+  width: 100%;
+  min-height: 11rem;
+  margin-bottom: 2.4rem;
+  padding: 1.6rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: var(--screen-text-color);
+  background-color: var(--screen-bg);
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.calc__screen .previous-operand {
+  color: currentColor;
+  opacity: 0.9;
+  font-size: 1.5rem;
+}
+.calc__screen .current-operand {
+  color: currentColor;
+  font-size: 3.2rem;
+}
+.calc__keypad {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: var(--keypad-bg);
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 1.2rem;
+}
+.calc__keypad .span-two {
+  grid-column: span 2;
+}
+.calc__keypad button {
+  color: var(--primary-text-color);
+  cursor: pointer;
+  background-color: var(--primary-key-bg);
+  border: none;
+  border-bottom: 3px solid var(--primary-key-shadow);
+  border-radius: 5px;
+}
+.calc__keypad button:hover {
+  opacity: 0.8;
+}
+.calc__keypad button[data-number] {
+  font-size: 3.2rem;
+}
+.calc__keypad button[data-delete], .calc__keypad button[data-all-clear] {
+  color: var(--secondary-text-color);
+  background-color: var(--key-bg);
+  border-bottom: 3px solid var(--key-shadow);
+}
+.calc__keypad button[data-equals] {
+  color: var(--accent-text-color);
+  background-color: var(--accent-key-bg);
+  border-color: var(--accent-key-shadow);
+}
+/*# sourceMappingURL=main.css.map */

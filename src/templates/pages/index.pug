@@ -1,0 +1,57 @@
+extends ../base.pug
+
+block content 
+    .container
+        .calc
+            .calc__header
+                h1.calc__title calc
+                .calc__theme
+                    h2 Theme 
+                    .calc__theme__selector
+                        .labels
+                            label(for="theme-1") 1
+                            label(for="theme-2") 2
+                            label(for="theme-3") 3
+                        .inputs
+                            input(type="checkbox" id="theme-1" value="theme-1" checked)
+                            input(type="checkbox" id="theme-2" value="theme-2")
+                            input(type="checkbox" id="theme-3" value="theme-3")
+            .calc__screen
+                .previous-operand(data-memory='')
+                .previous-operand(data-previous-operand='')
+                .current-operand(data-current-operand='')
+            .calc__keypad
+
+                button(data-memory-clear='') mc
+                button(data-memory-plus='') m+
+                button(data-memory-minus='') m-
+                button(data-memory-read='') mr
+                //- button.span-two(data-all-clear='') AC
+                button(data-number='') 7
+                button(data-number='') 8
+                button(data-number='') 9
+                button(data-delete='') DEL
+                //- row
+                button(data-number='') 4
+                button(data-number='') 5
+                button(data-number='') 6
+                button(data-operation='') +
+                //- row
+                button(data-number='') 1
+                button(data-number='') 2
+                button(data-number='') 3
+                button(data-operation='') -
+                //- row
+                button(data-number='') .
+                button(data-number='') 0
+                button(data-operation='') /
+                button(data-operation='') x
+                //- row
+                button.span-two(data-all-clear='') RESET
+                button.span-two(data-equals='') =
+        //- END .cals
+        .attribution Challenge by 
+            a(href="https://www.frontendmentor.io/?ref=challenge") Frontend Mentor
+            | . Coded by 
+            a(href="https://github.com/nmorajda") N. Morajda.
+    //- END .container
