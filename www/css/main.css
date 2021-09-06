@@ -238,9 +238,14 @@ body {
   background-color: var(--keypad-bg);
   padding: 2.4rem;
   border-radius: 0.8rem;
-  grid-template-columns: repeat(4, 80px);
+  grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(6, 60px);
   gap: 1.2rem;
+}
+@media (min-width: 800px) {
+  .calc__keypad {
+    grid-template-columns: repeat(4, 100px);
+  }
 }
 .calc__keypad .span-two {
   grid-column: span 2;
