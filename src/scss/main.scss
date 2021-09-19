@@ -4,6 +4,11 @@ $breakpoint: 800px;
 
 :root {
     --main-bg: hsl(224, 26%, 31%);
+    --theme-1: hsl(6, 63%, 50%);
+    --theme-2: hsl(25, 99%, 27%);
+    --theme-3: hsl(176, 100%, 44%);
+    --theme-4: hsl(9, 100%, 64%);
+
     --toggle-bg: hsl(223, 31%, 20%);
     --keypad-bg: hsl(223, 31%, 20%);
     --screen-bg: hsl(224, 36%, 15%);
@@ -12,7 +17,7 @@ $breakpoint: 800px;
     --key-shadow: hsl(224, 28%, 35%);
     
     --accent-key-bg: hsl(6, 63%, 50%);
-    --accent-toggle: hsl(6, 63%, 50%);
+    --accent-toggle: var(--theme-1);
     --accent-key-shadow: hsl(6, 70%, 34%);
     
     --primary-key-bg: hsl(30, 25%, 89%);
@@ -36,7 +41,7 @@ $breakpoint: 800px;
     --key-shadow:hsl(185, 58%, 25%);
     
     --accent-key-bg: hsl(25, 98%, 40%) ;
-    --accent-toggle: hsl(25, 99%, 27%);
+    --accent-toggle: var(--theme-2);
     --accent-key-shadow: hsl(6, 70%, 34%);
     
     --primary-key-bg: hsl(45, 7%, 89%);
@@ -60,7 +65,7 @@ $breakpoint: 800px;
     --key-shadow:hsl(285, 91%, 52%);
     
     --accent-key-bg: hsl(176, 100%, 44%);
-    --accent-toggle: hsl(176, 100%, 44%);
+    --accent-toggle: var(--theme-3);
     --accent-key-shadow: hsl(177, 92%, 70%);
     
     --primary-key-bg: hsl(268, 47%, 21%);
@@ -77,6 +82,7 @@ $breakpoint: 800px;
 
 .theme-4 {
     --main-bg: tomato;
+    --accent-toggle: var(--theme-4);
 
 }
 
@@ -192,16 +198,22 @@ body {
             input {
                 width: 16px;
                 height: 16px;
-                background-color: var(--accent-key-bg);
+                background-color: transparent;
                 border-radius: 100%;
                 appearance: none;
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity .3s ease-in-out;
+                transition: background .3s ease-in-out;
+                outline: none;
+
+                &:focus,
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--accent-toggle);
+                }
                 
                 &:checked {
                     visibility: visible;
                     opacity: 1;
+                    background-color: var(--accent-key-bg);
                 }
 
             }
